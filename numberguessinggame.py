@@ -3,11 +3,13 @@ from random import randrange
 """small game"""
 print("\n")
 print("guess a number between 0 - 10")
-guessedValue = int(input())
-while 0 > guessedValue > 10:
-    print("input wasn`t an number you stupid piece of shit.. \n")
-    print("try again: ")
-    guessedValue = int(input())
+
+while True:
+    try:
+        guessedValue = int(input())
+    except:
+        print("input wasn`t a number you stupid piece of shit.. \n")
+        print("try again: ")
 
 
 print("\n")
