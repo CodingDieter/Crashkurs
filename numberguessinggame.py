@@ -19,8 +19,6 @@ def numberguessinggame():
             print("input wasn`t a number you stupid piece of shit.. \n")
             print("try again: ")
 
-    print("\n")
-
     randomnumber = randrange(10)
 
     print("you chose: ", guessedvalue)
@@ -29,5 +27,8 @@ def numberguessinggame():
 
     if randomnumber == guessedvalue:
         print("you won... congrats:)")
+        return True
+
     else:
         print("loooooser :(")
+        return False

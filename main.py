@@ -1,8 +1,12 @@
 """main brain   author: Christian"""
 
 from numberguessinggame import numberguessinggame
+from class_player import Player
 
 while True:
+    print("type in player name: ")
+    player1 = Player(input())
+
     print("Which game do you like to play?")
     print()
     print("1. guess the number")
@@ -23,4 +27,10 @@ while True:
             print("try again: ")
 
     if selectedOption == 1:
-        numberguessinggame()
+        result = numberguessinggame()
+        if result:
+            player1.addpoints(50)
+        elif not result:
+            player1.subpoints(5)
+
+    print("Player result: ", player1.points)
