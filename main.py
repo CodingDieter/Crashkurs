@@ -34,3 +34,4 @@ while True:
             player1.subpoints(5)
 
     print("Player result: ", player1.points)
+    print()
